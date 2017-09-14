@@ -1,0 +1,62 @@
+\documentclass[
+	a4paper,
+	pagesize,
+	pdftex,
+	left=3cm,
+	right=3cm,
+	12pt,
+	%twoside, % + BCOR darunter: für doppelseitigen Druck aktivieren, sonst beide deaktivieren
+	%BCOR=3mm, % Dicke der Bindung berücksichtigen (Copyshop fragen, wie viel das ist)
+	ngerman,
+	fleqn,
+	final,
+	]{scrartcl}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc} % Eingabekodierung: UTF-8
+\usepackage{fixltx2e} % Schickere Ausgabe
+\usepackage[T1]{fontenc} % ordentliche Trennung
+\usepackage[ngerman]{babel}
+\usepackage{lmodern} % ordentliche Schriften
+%\usepackage{times}
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{mtpro2} % ordentliche Schriften
+%\usepackage[10]{fontspec}
+%\setsansfont{Liberation Sans}
+%\setmonofont[SmallCapsFont={Liberation Mono}]{Liberation Mono}
+\usepackage[unicode=true]{hyperref}
+\usepackage{setspace,graphicx,tikz,tabularx} % für Elemente der Titelseite
+\usepackage[draft=false,babel,tracking=true,kerning=true,spacing=true]{microtype} % optischer Randausgleich etc.
+\usepackage{setspace}
+
+\usepackage{lipsum}
+\usepackage[bottom,hang]{footmisc}
+\setlength{\footnotemargin}{5mm}
+
+
+\begin{document}
+
+% Beispielhafte Nutzung der Vorlage für die Titelseite (bitte anpassen):
+\input{Institutsvorlage}
+\titel{\normalfont \textbf{XXX}\\ XXX} % Titel der Arbeit
+\typ{\normalfont Hausarbeit} % Typ der Arbeit:  Diplomarbeit, Masterarbeit, Bachelorarbeit
+\grad{Master of Science (M. Sc.)} % erreichter Akademischer Grad
+% z.B.: Master of Science (M. Sc.), Master of Education (M. Ed.), Bachelor of Science (B. Sc.), Bachelor of Arts (B. A.), Diplominformatikerin
+\autor{\normalfont Marie Musterfrau} % Autor der Arbeit, mit Vor- und Nachname
+\gebdatum{\normalfont 1.1.1970} % Geburtsdatum des Autors
+\gebort{\normalfont Lüneburg} % Geburtsort des Autors
+%\gutachter{\normalfont Prof. Dr. Dr. hc. mult. Kerstin von Kienfeld}{Prof. Dr. Bernd Blume} % Erst- und Zweitgutachter der Arbeit
+%\mitverteidigung % entfernen, falls keine Verteidigung erfolgt
+\makeTitel
+
+% Hier folgt die eigentliche Arbeit (bei doppelseitigem Druck auf einem neuen Blatt):
+\setstretch{1,5}
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+Insert Text here!
+
+% Erzeugen der Selbständigkeitserklärung auf einem neuen Blatt:
+%\selbstaendigkeitserklaerung{\today}
+
+\end{document}
